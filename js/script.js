@@ -1,4 +1,4 @@
-document.getElementById('temperatureForm').addEventListener('submit', function(event) {
+document.getElementById('temperatureForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Get input values
@@ -14,11 +14,11 @@ document.getElementById('temperatureForm').addEventListener('submit', function(e
     // Convert temperature
     let result, explanation;
     if (unit === 'celsius') {
-        result = (temperature * 9/5) + 32;
+        result = (temperature * 9 / 5) + 32;
         explanation = `${temperature} Celsius dikonversi menjadi Fahrenheit dengan rumus (${temperature} × 9/5) + 32 = ${result.toFixed(2)}.`;
         document.getElementById('result').innerHTML = `${temperature} Celsius sama dengan ${result.toFixed(2)} Fahrenheit.`;
     } else {
-        result = (temperature - 32) * 5/9;
+        result = (temperature - 32) * 5 / 9;
         explanation = `${temperature} Fahrenheit dikonversi menjadi Celsius dengan rumus (${temperature} - 32) × 5/9 = ${result.toFixed(2)}.`;
         document.getElementById('result').innerHTML = `${temperature} Fahrenheit sama dengan ${result.toFixed(2)} Celsius.`;
     }
@@ -26,7 +26,7 @@ document.getElementById('temperatureForm').addEventListener('submit', function(e
     document.getElementById('explanation').innerHTML = explanation;
 });
 
-document.getElementById('resetButton').addEventListener('click', function() {
+document.getElementById('resetButton').addEventListener('click', function () {
     document.getElementById('temperatureForm').reset();
     document.getElementById('result').innerHTML = '';
     document.getElementById('explanation').innerHTML = '';
